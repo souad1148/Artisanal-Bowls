@@ -1,2 +1,0 @@
-export default `html,body{font-family:Montserrat,sans-serif}.no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}@keyframes ping-once{0%{transform:scale(1)}50%{transform:scale(1.2)}to{transform:scale(1)}}.animate-ping-once{animation:ping-once .3s ease-in-out}
-`;
