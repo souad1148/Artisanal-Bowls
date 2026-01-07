@@ -30,7 +30,7 @@ export class ProductsGridComponent {
     { id: 1, name: 'Moroccan Heritage Bowls', price: 150, image: '/assets/image-1.png', rating: 4.9, reviews: 50, isBestseller: true , liked: false},
     { id: 2, name: 'Volcanic Clay Vessel', price: 200, image: '/assets/image2.png', rating: 4.8, reviews: 30, isBestseller: false, liked: false },
     { id: 3, name: 'Sunset Glaze Bottle', price: 160, image: '/assets/iamge.png', rating: 4.9, reviews: 40, isBestseller: true, liked: true },
-    { id: 4, name: 'Minimal Stoneware Set', price: 180, image: "assets/image 3.png", rating: 4.7, reviews: 20, isBestseller: false, liked: false },
+    { id: 4, name: 'Minimal Stoneware Set', price: 180, image: "/assets/Image(Artisan's Choice).png", rating: 4.7, reviews: 20, isBestseller: false, liked: false },
     { id: 5, name: 'Earth Tone Pottery Vase', price: 120, image: 'assets/image 3.png', rating: 4.9, reviews: 50, isBestseller: true , liked: false}
   ];
   toggleLike(product: Product): void {
