@@ -1,0 +1,143 @@
+<div
+  id="menu"
+  class="relative flex justify-center items-center
+         py-20 sm:py-24 lg:py-32"
+>
+
+  <!-- LEFT ARROW (DESKTOP ONLY) -->
+  <button
+    class="hidden lg:flex absolute left-20
+           text-3xl lg:text-4xl
+           w-16 h-16 lg:w-24 lg:h-24
+           bg-[#F3ACB2] rounded-full
+           items-center justify-center
+           hover:scale-110 transition-transform"
+  >
+    <i class="bx bx-chevron-left"></i>
+  </button>
+
+  <!-- CARDS CONTAINER -->
+  <div
+    class="flex flex-row
+           gap-6 sm:gap-8
+           p-4 sm:p-10 lg:p-16
+           mt-6
+           rounded-3xl
+           scale-100 lg:scale-80
+
+           /* MOBILE SCROLL */
+           overflow-x-auto overflow-y-hidden
+           no-scrollbar
+           snap-x snap-mandatory
+
+           /* DESKTOP */
+           lg:overflow-visible
+
+           /* BACKGROUND */
+          
+           lg:bg-[url('assets/Rectangle_3.png')]
+           lg:bg-cover"
+  >
+
+    <!-- CARD 1 -->
+    <div
+      class="bg-[#FCF9F5] w-72 sm:w-80
+             snap-start shrink-0
+             rounded-2xl shadow-md
+             hover:-translate-y-3 transition-transform
+             overflow-hidden"
+    >
+      <img
+        src="assets/d85ae8c612b28c49eeaf283520e3cc53adde094a.png"
+        class="w-full h-60 sm:h-72 object-cover scale-90"
+      />
+      <div class="p-5 flex flex-col gap-3">
+        <h3 class="font-semibold text-[#543635] text-lg">
+          Vanilla Ice Cream
+        </h3>
+
+        <div class="flex gap-2 text-xs text-gray-500">
+          <span>Vegan</span><span>Gluten Free</span><span>Organic</span>
+        </div>
+
+        <p class="text-gray-600 text-sm">
+          Lorem ipsum dolor sit Amet Consectetur.
+        </p>
+
+        <div class="flex gap-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full text-xs">
+            Choco Chips
+          </span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full text-xs">
+            Nuts
+          </span>
+        </div>
+
+        <div class="flex justify-between items-center mt-3">
+          <span class="font-bold text-lg">$10.00</span>
+          <button
+            class="px-4 py-2 bg-gray-200 text-[#311d1d]
+                   rounded-lg font-bold
+                   hover:bg-[#412F2F] hover:text-white
+                   transition-all"
+          >
+            Order Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="bg-[#FCF9F5] w-72 sm:w-80 snap-start shrink-0 rounded-2xl shadow-md hover:-translate-y-3 transition-transform overflow-hidden">
+      <img src="assets/c460a07ecb9d53974d244811f27771fe2ba44c71.png" class="w-full h-60 sm:h-72 object-cover scale-90">
+      <div class="p-5 flex flex-col gap-3">
+        <h3 class="font-semibold text-[#543635] text-lg">Vanilla Ice Cream</h3>
+        <div class="flex gap-2 text-xs text-gray-500">
+          <span>Vegan</span><span>Gluten Free</span><span>Organic</span>
+        </div>
+        <p class="text-gray-600 text-sm">Lorem ipsum dolor sit Amet Consectetur.</p>
+        <div class="flex gap-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full text-xs">Choco Chips</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full text-xs">Nuts</span>
+        </div>
+        <div class="flex justify-between items-center mt-3">
+          <span class="font-bold text-lg">$10.00</span>
+          <button class="px-4 py-2 bg-gray-200 text-[#311d1d] rounded-lg font-bold hover:bg-[#412F2F] hover:text-white transition-all">Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="bg-[#FCF9F5] w-72 sm:w-80 snap-start shrink-0 rounded-2xl shadow-md hover:-translate-y-3 transition-transform overflow-hidden">
+      <img src="assets/4d70845eda6a167a3dabddd4af5dd891d5a93726 (1).png" class="w-full h-60 sm:h-72 object-cover scale-80">
+      <div class="p-5 flex flex-col gap-3">
+        <h3 class="font-semibold text-[#543635] text-lg">Vanilla Ice Cream</h3>
+        <div class="flex gap-2 text-xs text-gray-500">
+          <span>Vegan</span><span>Gluten Free</span><span>Organic</span>
+        </div>
+        <p class="text-gray-600 text-sm">Lorem ipsum dolor sit Amet Consectetur.</p>
+        <div class="flex gap-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full text-xs">Choco Chips</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full text-xs">Nuts</span>
+        </div>
+        <div class="flex justify-between items-center mt-3">
+          <span class="font-bold text-lg">$10.00</span>
+          <button class="px-4 py-2 bg-gray-200 text-[#311d1d] rounded-lg font-bold hover:bg-[#412F2F] hover:text-white transition-all">Order Now</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT ARROW (DESKTOP ONLY) -->
+  <button
+    class="hidden lg:flex absolute right-20
+           text-3xl lg:text-4xl
+           w-16 h-16 lg:w-24 lg:h-24
+           bg-[#F3ACB2] rounded-full
+           items-center justify-center
+           hover:scale-110 transition-transform"
+  >
+    <i class="bx bx-chevron-right"></i>
+  </button>
+</div>

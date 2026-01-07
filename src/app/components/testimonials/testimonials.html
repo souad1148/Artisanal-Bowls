@@ -1,0 +1,83 @@
+<section id="testimonial" class="py-20">
+  <div class="max-w-6xl mx-auto bg-[#e1dcd8] rounded-3xl px-16 py-14 relative">
+
+    <!-- HEADER -->
+    <h2 class="text-[36px] font-medium text-center text-gray-900">
+      What Our Customers Say
+    </h2>
+    <p class="text-center text-gray-600 mt-2">
+      Hear From People Who Love Our Handcrafted Ceramics
+    </p>
+
+    <!-- CARD -->
+    <div class="relative mt-16 max-w-2xl mx-auto">
+
+      <div class="bg-[#D7CEC7] rounded-3xl px-10 py-14 text-center relative">
+
+        <!-- AVATAR -->
+        <img
+          [src]="testimonials[currentIndex].avatar"
+          class="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
+        />
+
+        <!-- STARS -->
+        <div class="flex justify-center gap-1 mb-4">
+          <ng-container *ngFor="let s of [].constructor(testimonials[currentIndex].rating)">
+            <svg class="w-5 h-5 fill-[#c47b55]" viewBox="0 0 24 24">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2
+                   9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+          </ng-container>
+        </div>
+
+        <!-- QUOTE -->
+        <p class="text-gray-800 text-[16px] leading-relaxed max-w-2xl mx-auto">
+          “{{ testimonials[currentIndex].quote }}”
+        </p>
+
+        <!-- NAME -->
+        <p class="mt-6 font-medium text-gray-900">
+          {{ testimonials[currentIndex].name }}
+        </p>
+        <p class="text-sm text-gray-600">
+          {{ testimonials[currentIndex].role }}
+        </p>
+
+        <!-- DOTS -->
+        <div class="flex justify-center gap-2 mt-6">
+          <span
+            *ngFor="let t of testimonials; let i = index"
+            class="w-2.5 h-2.5 rounded-full"
+            [ngClass]="
+              i === currentIndex
+                ? 'bg-[#c47b55]'
+                : 'bg-gray-400/50'
+            "
+          ></span>
+        </div>
+
+        <!-- ARROWS -->
+        <button
+          (click)="prev()"
+          class="absolute left-8 top-1/7 -translate-y-1/2
+                 w-8 h-8 bg-white rounded-full shadow
+                 flex items-center justify-center"
+        >
+          ‹
+        </button>
+
+        <button
+          (click)="next()"
+          class="absolute right-6 top-1/7 -translate-y-1/2
+                 w-8 h-8 bg-white rounded-full shadow
+                 flex items-center justify-center"
+        >
+          ›
+        </button>
+
+      </div>
+    </div>
+  </div>
+</section>
