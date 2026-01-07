@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/Artisanal-Bowls',
+  basePath: '/',
   supportedLocales: {
   "en-US": ""
 },
