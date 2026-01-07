@@ -1,32 +1,60 @@
-<section class="bg-[#faf7f2] py-20 relative" id="products">
-  <div class="max-w-6xl mx-auto px-6">
+<section class="bg-[#faf7f2] py-12 md:py-20 relative" id="products">
+  <div class="max-w-6xl mx-auto px-4 md:px-6">
 
     <!-- HEADER -->
-    <p class="text-[24px] text-gray-900 mb-2">Our Collection</p>
-    <h2 class="text-[45px] font-medium text-gray-900 mb-2">
+    <p class="text-[18px] md:text-[24px] text-gray-900 mb-1">
+      Our Collection
+    </p>
+
+    <h2 class="text-[30px] md:text-[45px] font-medium text-gray-900 mb-1">
       Handcrafted Bowls
     </h2>
-    <p class="text-gray-900 mb-12 font-medium">
+
+    <p class="text-gray-900 mb-8 md:mb-12 font-medium text-sm md:text-base">
       Each Piece Tells Its Own Story
     </p>
-    <!-- LEFT BUTTON --> <button (click)="scrollLeft()" class="absolute left-6 top-[55%] opacity-55 w-9 h-9 bg-white rounded-full shadow flex items-center justify-center z-20 font-medium text-3xl"> ‹ </button> <!-- RIGHT BUTTON --> <button (click)="scrollRight()" class="absolute right-6 top-[55%] opacity-55 w-9 h-9 bg-white rounded-full shadow flex items-center justify-center z-20 font-medium text-3xl"> › </button>
+
+    <!-- LEFT BUTTON -->
+    <button
+      (click)="scrollLeft()"
+      class="absolute left-2 md:left-6 top-[60%]
+             opacity-50 md:opacity-55
+             w-8 h-8 md:w-9 md:h-9
+             bg-white rounded-full shadow
+             flex items-center justify-center
+             z-20 font-medium text-2xl md:text-3xl">
+      ‹
+    </button>
+
+    <!-- RIGHT BUTTON -->
+    <button
+      (click)="scrollRight()"
+      class="absolute right-2 md:right-6 top-[60%]
+             opacity-50 md:opacity-55
+             w-8 h-8 md:w-9 md:h-9
+             bg-white rounded-full shadow
+             flex items-center justify-center
+             z-20 font-medium text-2xl md:text-3xl">
+      ›
+    </button>
 
     <!-- SCROLL CONTAINER -->
     <div
       #scrollContainer
-      class="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar pb-6"
+      class="flex gap-4 md:gap-6
+             overflow-x-auto scroll-smooth
+             no-scrollbar pb-6"
     >
 
       <!-- PRODUCT CARD -->
       <div
         *ngFor="let product of products"
-        class="min-w-[300px]
+        class="min-w-[260px] md:min-w-[300px]
                bg-[#fbf8f3]
-               rounded-[28px]
+               rounded-[24px] md:rounded-[28px]
                border border-[#e6e1db]
                overflow-hidden
-               relative
-               transition hover:shadow-md"
+               relative transition hover:shadow-md"
       >
 
         <!-- BADGE -->
@@ -84,7 +112,7 @@
         </button>
 
         <!-- IMAGE -->
-        <div class="w-full h-[210px] bg-[#efe8e1]">
+        <div class="w-full h-[170px] md:h-[210px] bg-[#efe8e1]">
           <img
             [src]="product.image"
             [alt]="product.name"
@@ -94,28 +122,30 @@
 
         <!-- CONTENT -->
         <div class="p-5">
-          <h3 class="text-[20px] font-medium text-black mb-1">
+          <h3 class="text-[17px] md:text-[20px] font-medium text-black mb-1">
             {{ product.name }}
           </h3>
 
           <div class="flex items-center gap-2 mb-2">
-            <span class="text-black text-[20px]">★★★★★</span>
-            <span class="font-medium">5.0</span>
+            <span class="text-black text-sm md:text-base">★★★★★</span>
+            <span class="font-medium text-sm md:text-base">5.0</span>
           </div>
 
-          <p class="text-gray-500 text-sm mb-5">
+          <p class="text-gray-500 text-sm mb-4">
             Handcrafted terracotta with a natural textured finish
           </p>
 
           <div class="flex items-center justify-between">
-            <span class="text-[#BE725A] font-bold text-lg">
+            <span class="text-[#BE725A] font-bold text-base md:text-lg">
               {{ product.price }} MAD
             </span>
 
             <button
               (click)="buy(product)"
-              class="bg-[#BE725A] text-white px-7 py-3 rounded-full
-                     text-sm font-medium hover:opacity-90 transition"
+              class="bg-[#BE725A] text-white
+                     px-5 md:px-7 py-2.5 md:py-3
+                     rounded-full text-xs md:text-sm
+                     font-medium hover:opacity-90 transition"
             >
               Buy Now
             </button>
@@ -131,17 +161,22 @@
 <!-- OVERLAY -->
 <div
   *ngIf="showCheckout"
-  class="fixed inset-0 bg-black/40 z-50"
+  class="fixed inset-0 bg-black/40 z-40"
   (click)="closeCheckout()"
 ></div>
 
 <!-- MODAL CARD -->
 <div
   *ngIf="showCheckout"
-  class="fixed z-50 top-1/2 left-1/2
-         -translate-x-1/2 -translate-y-1/2
-         bg-white w-[420px]
-         rounded-3xl p-6 shadow-xl"
+  class="fixed z-50
+         inset-0 md:top-1/2 md:left-1/2
+         md:-translate-x-1/2 md:-translate-y-1/2
+         bg-white
+         w-full md:w-[420px]
+         h-full md:h-auto
+         rounded-none md:rounded-3xl
+         p-5 md:p-6 shadow-xl
+         overflow-y-auto"
 >
 
   <div class="flex justify-between items-center mb-4">

@@ -1,98 +1,123 @@
-<section id="home" class="w-full bg-[#faf7f2] px-10 py-0">
+<section id="home" class="w-full bg-[#faf7f2] px-4 md:px-10 py-6 md:py-0">
   <div
-    class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center"
+    class="max-w-7xl mx-auto
+           grid grid-cols-1 lg:grid-cols-2
+           gap-12 lg:gap-20
+           items-center"
   >
-   
-    <div class="relative w-full flex justify-center">
- 
-    <div
-      class="relative w-[520px] h-[660px]
-            overflow-hidden
-            rounded-t-[220px] rounded-b-[40px]
-            z-10">
 
-      <img
-        src="assets/Group-1.png"
-        alt="Ceramic bowl"
-        class="w-100 h-100 object-cover"
-      />
-    </div>
-  </div>
-
-
-    <div class="max-w-xl font-sans">
-
-  <p class="text-[28px] text-[#050505] mb-6 font-normal tracking-wide">
-    Summer Collection
-  </p>
-
-
-  <h1 class="text-[55px]  leading-[1.15] font-medium text-[#1F2937]">
-    Artisan Bowls
-    <span class="block">
-      <span class="text-[#BE725A] font-medium">Crafted</span>
-      <span class="font-medium"> For Your</span>
-    </span>
-    <span class="block font-medium">Table</span>
-  </h1>
-
-  <!-- Description -->
-  <p class="text-[24px] text-[#020202] leading-[1.8] mt-2 mb-2 max-w-[480px]">
-    <span class="font-medium"> Discover the perfect blend of artisan </span>
-    <span class="font-medium">craftsmanship and timeless design. Each piece</span>
-    <span class="font-medium">Is Carefully Shaped And Glazed To Bring Beauty
-    </span>
-    <span class="font-medium">To Your Table.</span>
-  </p>
-
-  <!-- Stats -->
-  <div class="flex gap-20 mt-12">
-    <div>
-      <p class="text-[45px] font-semibold text-[#BE725A]">2K+</p>
-      <p class="text-[16px] text-[#374151] font-semibold mt-0">
-        Happy Customers
-      </p>
+    <!-- IMAGE -->
+    <div class="relative w-full flex justify-center order-1 lg:order-none">
+      <div
+        class="relative
+               w-[280px] h-[380px]
+               md:w-[420px] md:h-[540px]
+               lg:w-[520px] lg:h-[660px]
+               overflow-hidden
+               rounded-t-[180px] lg:rounded-t-[220px]
+               rounded-b-[40px]
+               z-10"
+      >
+        <img
+          src="assets/Group-1.png"
+          alt="Ceramic bowl"
+          class="w-full h-full object-cover"
+        />
+      </div>
     </div>
 
-    <div>
-      <p class="text-[45px] font-semibold text-[#BE725A]">500+</p>
-      <p class="text-[16px] text-[#374151] font-semibold mt-0">
-        Products
+    <!-- TEXTE -->
+    <div class="max-w-xl font-sans text-center lg:text-left">
+
+      <p class="text-[18px] md:text-[22px] lg:text-[28px] text-[#050505] mb-4 md:mb-6 font-normal tracking-wide">
+        Summer Collection
       </p>
-    </div>
 
-    <div>
-      <p class="text-[45px] font-semibold text-[#BE725A]">
-        4.9<span class="ml-1 text-[#BE725A]">★</span>
+      <h1
+        class="text-[34px] md:text-[44px] lg:text-[55px]
+               leading-[1.2] font-medium text-[#1F2937]"
+      >
+        Artisan Bowls
+        <span class="block">
+          <span class="text-[#BE725A]">Crafted</span>
+          <span> For Your</span>
+        </span>
+        <span class="block">Table</span>
+      </h1>
+
+      <p
+        class="text-[16px] md:text-[20px] lg:text-[24px]
+               text-[#020202]
+               leading-[1.8]
+               mt-4 mb-6
+               max-w-[480px]
+               mx-auto lg:mx-0"
+      >
+        Discover the perfect blend of artisan craftsmanship and timeless design.
+        Each piece is carefully shaped and glazed to bring beauty to your table.
       </p>
-      <p class="text-[16px]  text-[#374151] font-semibold mt-0">
-        Average Rating
-      </p>
-    </div>
-  </div>
 
-  <!-- Buttons -->
-  <div class="flex gap-6 mt-14">
-    <button
-      class="bg-[#BE725A] text-white
-             px-10 py-4
-             rounded-[16px] text-[16px] font-medium
-             hover:opacity-90 transition"
-    >
-      Shop Now
-    </button>
+      <!-- STATS -->
+      <div
+        class="flex flex-col md:flex-row
+               gap-6 md:gap-16 lg:gap-20
+               mt-8 lg:mt-12
+               items-center md:items-start"
+      >
+        <div>
+          <p class="text-[32px] lg:text-[45px] font-semibold text-[#BE725A]">2K+</p>
+          <p class="text-[14px] lg:text-[16px] text-[#374151] font-semibold">
+            Happy Customers
+          </p>
+        </div>
 
-    <button
-      class="border border-[#BE725A]
-             text-[#BE725A]
-             px-10 py-4
-             rounded-[16px] text-[16px] font-medium
-             hover:shadow-slate-500 hover:border-slate-200 transition"  id="Collection"
-    >
-      View Collection
-    </button>
-  </div>
+        <div>
+          <p class="text-[32px] lg:text-[45px] font-semibold text-[#BE725A]">500+</p>
+          <p class="text-[14px] lg:text-[16px] text-[#374151] font-semibold">
+            Products
+          </p>
+        </div>
 
+        <div>
+          <p class="text-[32px] lg:text-[45px] font-semibold text-[#BE725A]">
+            4.9<span class="ml-1">★</span>
+          </p>
+          <p class="text-[14px] lg:text-[16px] text-[#374151] font-semibold">
+            Average Rating
+          </p>
+        </div>
+      </div>
+
+<div
+  class="flex flex-col sm:flex-row
+         gap-4 sm:gap-6
+         mt-10 lg:mt-14
+         justify-center lg:justify-start"
+>
+  <!-- SHOP NOW -->
+  <button
+    (click)="scrollToSection('products')"
+    class="bg-[#BE725A] text-white
+           px-8 lg:px-10 py-4
+           rounded-[16px] text-[15px] lg:text-[16px]
+           font-medium hover:opacity-90 transition"
+  >
+    Shop Now
+  </button>
+
+  <!-- VIEW COLLECTION -->
+  <button
+    (click)="scrollToSection('products')"
+    class="border border-[#BE725A]
+           text-[#BE725A]
+           px-8 lg:px-10 py-4
+           rounded-[16px] text-[15px] lg:text-[16px]
+           font-medium hover:shadow transition"
+  >
+    View Collection
+  </button>
 </div>
+
+    </div>
   </div>
 </section>

@@ -1,115 +1,168 @@
-<section id="contact" class="bg-[#faf7f2] py-20 px-6">
+<section id="contact" class="bg-[#faf7f2] py-12 md:py-20 px-4 md:px-6">
   <div class="max-w-6xl mx-auto">
 
     <!-- TITLE -->
-    <div class="text-center mb-16">
-      <h2 class="text-[36px] font-medium text-[#1f2937]">
+    <div class="text-center mb-10 md:mb-16">
+      <h2 class="text-[26px] md:text-[36px] font-medium text-[#1f2937]">
         Get In Touch
       </h2>
-      <p class="text-[#6b7280] mt-2">
+      <p class="text-[#6b7280] mt-2 text-sm md:text-base">
         Have Questions? We'd Love To Hear From You.
       </p>
     </div>
 
     <!-- CONTENT -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
       <!-- LEFT : CONTACT INFO -->
       <div>
-        <h3 class="text-[18px] font-medium text-[#1f2937] mb-8">
+
+        <h3 class="text-[16px] md:text-[18px] font-medium text-[#1f2937] mb-6">
           Contact Information
         </h3>
 
-        <!-- ITEM -->
-        <div class="flex items-start gap-4 mb-6">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center">
-            <img src="/assets/Container-9.png" alt="email" class="w-10 h-10">
+        <!-- EMAIL -->
+        <a
+          href="mailto:souadibaaz@gmail.com"
+          class="flex items-start gap-4 mb-5 group"
+        >
+          <div
+            class="w-10 h-10 flex-shrink-0
+                   rounded-full bg-[#c47b55]
+                   flex items-center justify-center"
+          >
+            <img src="/assets/Container-9.png" alt="email" class="w-10 h-10" />
           </div>
-          <div>
-            <p class="font-medium text-[#1f2937]">Email</p>
-            <p class="text-[#6b7280]">Hello@Artisanbowls.Com</p>
-          </div>
-        </div>
 
-        <!-- ITEM -->
-        <div class="flex items-start gap-4 mb-6">
-          <div class="w-10 h-10 rounded-full  flex items-center justify-center">
-            <img src="/assets/Container-8.png" alt="phone" class="w-10 h-10">
+          <div class="text-left">
+            <p class="font-medium text-[#1f2937] group-hover:underline">
+              Email
+            </p>
+            <p class="text-[#6b7280] text-sm md:text-base">
+              hello@artisanbowls.com
+            </p>
           </div>
-          <div>
-            <p class="font-medium text-[#1f2937]">Phone</p>
-            <p class="text-[#6b7280]">+212 633 640 083</p>
-          </div>
-        </div>
+        </a>
 
-        <!-- ITEM -->
-        <div class="flex items-start gap-4 mb-10">
-          <div class="w-10 h-10 rounded-full  flex items-center justify-center">
-            <img src="/assets/Container-7.png" alt="location" class="w-10 h-10">
+        <!-- PHONE -->
+        <a
+          href="tel:+212633640083"
+          class="flex items-start gap-4 mb-5 group"
+        >
+          <div
+            class="w-10 h-10 flex-shrink-0
+                   rounded-full bg-[#c47b55]
+                   flex items-center justify-center"
+          >
+            <img src="/assets/Container-8.png" alt="phone" class="w-10 h-10" />
           </div>
-          <div>
-            <p class="font-medium text-[#1f2937]">Location</p>
-            <p class="text-[#6b7280]">
-              123 Street,<br>
+
+          <div class="text-left">
+            <p class="font-medium text-[#1f2937] group-hover:underline">
+              Phone
+            </p>
+            <p class="text-[#6b7280] text-sm md:text-base">
+              +212 633 640 083
+            </p>
+          </div>
+        </a>
+
+        <!-- LOCATION -->
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=Ouarzazate%2C%20Morocco"
+          target="_blank"
+          rel="noopener"
+          class="flex items-start gap-4 mb-8 group"
+        >
+          <div
+            class="w-10 h-10 flex-shrink-0
+                   rounded-full bg-[#c47b55]
+                   flex items-center justify-center"
+          >
+            <img src="/assets/Container-7.png" alt="location" class="w-10 h-10" />
+          </div>
+
+          <div class="text-left">
+            <p class="font-medium text-[#1f2937] group-hover:underline">
+              Location
+            </p>
+            <p class="text-[#6b7280] text-sm md:text-base">
+              123 Street,<br />
               Ouarzazate, Morocco
             </p>
           </div>
-        </div>
+        </a>
 
         <!-- VISIT -->
         <h4 class="font-medium text-[#1f2937] mb-2">
           Visit Our Studio
         </h4>
-        <p class="text-[#6b7280] max-w-md">
+        <p class="text-[#6b7280] text-sm md:text-base max-w-md">
           Come See Our Artisans At Work! Our Studio Is Open For Visits
-          Monday Through Friday, 9am - 10pm.
+          Monday Through Friday, 9am – 10pm.
         </p>
+
       </div>
 
       <!-- RIGHT : FORM -->
-      <div class="bg-[#efebe5] scale-x-90 scale-y-110 rounded-3xl p-9 ml-0 lg:ml-10">
-        <form [formGroup]="contactForm" (ngSubmit)="submit()" class="space-y-6">
+      <div
+        class="bg-[#efebe5]
+               rounded-3xl
+               p-6 md:p-9
+               lg:ml-10"
+      >
+        <form
+          [formGroup]="contactForm"
+          (ngSubmit)="submit()"
+          class="space-y-5"
+        >
 
           <div>
-            <label class="block text-sm font-medium text-[#1f2937] mb-2">
+            <label class="block text-sm font-medium text-[#1f2937] mb-1.5">
               Your Name
             </label>
             <input
               formControlName="name"
               type="text"
               placeholder="Enter your name"
-              class="w-full h-7 rounded-lg px-6 py-3 border border-[#d6d3ce] focus:outline-none"
+              class="w-full h-10 rounded-lg px-4
+                     border border-[#d6d3ce]
+                     focus:outline-none"
             />
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-[#1f2937] mb-2">
+            <label class="block text-sm font-medium text-[#1f2937] mb-1.5">
               Email Address
             </label>
             <input
               formControlName="email"
               type="email"
               placeholder="your@email.com"
-              class="w-full h-7 rounded-lg px-6 py-3 border border-[#d6d3ce] focus:outline-none"
+              class="w-full h-10 rounded-lg px-4
+                     border border-[#d6d3ce]
+                     focus:outline-none"
             />
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-[#1f2937] mb-2">
+            <label class="block text-sm font-medium text-[#1f2937] mb-1.5">
               Message
             </label>
-            <input 
+            <textarea
               formControlName="message"
-              type="text"
+              rows="4"
               placeholder="Tell us about your project..."
-              class="w-full h-7 rounded-lg px-6 py-3 mb-12 border border-[#d6d3ce] resize-none focus:outline-none"
-            />
+              class="w-full rounded-lg px-4 py-3
+                     border border-[#d6d3ce]
+                     resize-none focus:outline-none"
+            ></textarea>
           </div>
 
           <button
             type="submit"
             class="w-full h-11 bg-[#BE725A] text-white
-                   py-2 rounded-full text-[20px]
+                   rounded-full text-[16px] md:text-[18px]
                    font-medium hover:opacity-90 transition"
           >
             Send Message

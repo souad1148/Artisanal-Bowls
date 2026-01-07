@@ -1,39 +1,72 @@
-<section id="testimonial" class="py-20">
-  <div class="max-w-6xl mx-auto bg-[#e1dcd8] rounded-3xl px-16 py-14 relative">
+<section id="testimonial" class="py-12 md:py-20 bg-[#faf7f2]">
+  <div
+    class="max-w-6xl mx-auto
+           bg-[#e1dcd8]
+           rounded-3xl
+           px-6 md:px-16
+           py-10 md:py-14
+           relative"
+  >
 
     <!-- HEADER -->
-    <h2 class="text-[36px] font-medium text-center text-gray-900">
+    <h2
+      class="text-[26px] md:text-[36px]
+             font-medium text-center text-gray-900"
+    >
       What Our Customers Say
     </h2>
-    <p class="text-center text-gray-600 mt-2">
+
+    <p
+      class="text-center text-gray-600
+             mt-2 text-sm md:text-base"
+    >
       Hear From People Who Love Our Handcrafted Ceramics
     </p>
 
     <!-- CARD -->
-    <div class="relative mt-16 max-w-2xl mx-auto">
+    <div class="relative mt-10 md:mt-16 max-w-2xl mx-auto">
 
-      <div class="bg-[#D7CEC7] rounded-3xl px-10 py-14 text-center relative">
+      <div
+        class="bg-[#D7CEC7]
+               rounded-3xl
+               px-6 md:px-10
+               py-10 md:py-14
+               text-center
+               relative"
+      >
 
         <!-- AVATAR -->
         <img
           [src]="testimonials[currentIndex].avatar"
-          class="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
+          alt="Customer avatar"
+          class="w-16 h-16 md:w-20 md:h-20
+                 rounded-full mx-auto mb-4
+                 object-cover"
         />
 
         <!-- STARS -->
         <div class="flex justify-center gap-1 mb-4">
-          <ng-container *ngFor="let s of [].constructor(testimonials[currentIndex].rating)">
-            <svg class="w-5 h-5 fill-[#c47b55]" viewBox="0 0 24 24">
+          <ng-container
+            *ngFor="let s of [].constructor(testimonials[currentIndex].rating)"
+          >
+            <svg class="w-4 h-4 md:w-5 md:h-5 fill-[#c47b55]" viewBox="0 0 24 24">
               <path
-                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2
-                   9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24
+                   l-7.19-.61L12 2
+                   9.19 8.63 2 9.24
+                   l5.46 4.73L5.82 21z"
               />
             </svg>
           </ng-container>
         </div>
 
         <!-- QUOTE -->
-        <p class="text-gray-800 text-[16px] leading-relaxed max-w-2xl mx-auto">
+        <p
+          class="text-gray-800
+                 text-[14px] md:text-[16px]
+                 leading-relaxed
+                 max-w-2xl mx-auto"
+        >
           “{{ testimonials[currentIndex].quote }}”
         </p>
 
@@ -41,6 +74,7 @@
         <p class="mt-6 font-medium text-gray-900">
           {{ testimonials[currentIndex].name }}
         </p>
+
         <p class="text-sm text-gray-600">
           {{ testimonials[currentIndex].role }}
         </p>
@@ -49,7 +83,7 @@
         <div class="flex justify-center gap-2 mt-6">
           <span
             *ngFor="let t of testimonials; let i = index"
-            class="w-2.5 h-2.5 rounded-full"
+            class="w-2.5 h-2.5 rounded-full transition"
             [ngClass]="
               i === currentIndex
                 ? 'bg-[#c47b55]'
@@ -61,18 +95,26 @@
         <!-- ARROWS -->
         <button
           (click)="prev()"
-          class="absolute left-8 top-1/7 -translate-y-1/2
-                 w-8 h-8 bg-white rounded-full shadow
-                 flex items-center justify-center"
+          class="absolute
+                 left-3 md:left-8
+                 top-1/2 -translate-y-1/2
+                 w-7 h-7 md:w-8 md:h-8
+                 bg-white rounded-full shadow
+                 flex items-center justify-center
+                 text-lg"
         >
           ‹
         </button>
 
         <button
           (click)="next()"
-          class="absolute right-6 top-1/7 -translate-y-1/2
-                 w-8 h-8 bg-white rounded-full shadow
-                 flex items-center justify-center"
+          class="absolute
+                 right-3 md:right-6
+                 top-1/2 -translate-y-1/2
+                 w-7 h-7 md:w-8 md:h-8
+                 bg-white rounded-full shadow
+                 flex items-center justify-center
+                 text-lg"
         >
           ›
         </button>
